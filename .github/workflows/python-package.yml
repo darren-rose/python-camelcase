@@ -24,15 +24,19 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install pipenv
+    - name: pipenv
       run: |
         pip install pipenv
 
-    - name: Install dependencies
+    - name: dependencies
       run: |
         pipenv install
-        
-    - name: List dependencies
+
+    - name: update dependencies
+      run: |
+        pipenv update
+
+    - name: list dependencies
       run: |
         pip list
         
