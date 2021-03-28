@@ -5,9 +5,9 @@ name = "pypi"
 
 [packages]
 camelcase = "==0.2"
-nose2 = "*"
 
 [dev-packages]
+nose2 = "*"
 
 [requires]
 python_version = "3.9"
