@@ -10,32 +10,22 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  ci:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.9]
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: checkout
+      uses: actions/checkout@v2
+    
+    - name: set up python
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.9
 
-    - name: pipenv
+    - name: install dependencies
       run: |
         pip install pipenv
+        pipenv install --deploy --dev
 
-    - name: dependencies
-      run: |
-        pipenv install --dev
-
-    - name: list dependencies
-      run: |
-        pip list
-        
-    - name: Test with nose2
+    - name: test
       run: |
         python -m nose2
