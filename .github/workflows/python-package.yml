@@ -29,5 +29,4 @@ jobs:
     - name: test
       run: |
         pipenv install nose2 --dev
-        pipenv shell
         python -m nose2
