@@ -28,5 +28,5 @@ jobs:
 
     - name: test
       run: |
-        pipenv install nose2 --dev
-        python -m nose2
+        pipenv run nose2
+    
