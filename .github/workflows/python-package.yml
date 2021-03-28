@@ -34,4 +34,4 @@ jobs:
         
     - name: Test with nose2
       run: |
-        python -m nose
+        python -m nose2
