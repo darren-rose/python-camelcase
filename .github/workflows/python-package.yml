@@ -25,7 +25,8 @@ jobs:
       run: |
         pip install pipenv
         pipenv install --deploy --dev
+        python -m nose2
 
     - name: test
       run: |
-        python -m nose2
+        echo "todo"
