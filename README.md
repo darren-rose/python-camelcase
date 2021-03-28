@@ -1,8 +1,15 @@
 # python-camelcase
 
-### tests
+
+### install
+
 ```
-python3 -m nose
+pipenv install --dev
+```
+
+### test
+```
+pipenv run nose2  
 ```
 
 
